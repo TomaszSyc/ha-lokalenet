@@ -1,0 +1,36 @@
+name: Błąd
+description: Coś nie działa
+labels: [bug]
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Wersje
+      description: Wersja integracji (z manifest.json) i Home Assistanta.
+      placeholder: "0.1.0 / 2026.9.3"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Co się stało
+      description: Co zrobiłeś, czego oczekiwałeś, co wyszło.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logi
+      description: >
+        Ustawienia → System → Logi, filtr `lokalenet`. Zamień identyfikator, kwoty
+        i nazwy na zmyślone, zanim wkleisz.
+      render: text
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostyka
+      description: >
+        Opcjonalnie. Ustawienia → Urządzenia i usługi → LokaleNET → ⋮ → Pobierz
+        diagnostykę, a potem wklej zawartość pliku. Są w niej tylko liczby wierszy
+        i adres portalu, więc nie trzeba niczego wycinać.
+      render: json

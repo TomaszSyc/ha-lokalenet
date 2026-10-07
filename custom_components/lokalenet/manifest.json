@@ -1,0 +1,14 @@
+{
+  "domain": "lokalenet",
+  "name": "LokaleNET (MMSoft)",
+  "codeowners": [
+    "@TomaszSyc"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/TomaszSyc/ha-lokalenet",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/TomaszSyc/ha-lokalenet/issues",
+  "requirements": [],
+  "version": "0.2.0"
+}

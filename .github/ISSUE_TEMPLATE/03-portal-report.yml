@@ -1,0 +1,37 @@
+name: Inny zarządca
+description: Integracja działa (albo nie) na koncie u innego zarządcy niż testowany
+labels: [portal-report]
+body:
+  - type: input
+    id: portal
+    attributes:
+      label: Adres strony logowania
+      description: Domyślny albo inny, jeśli zarządca podał własny. Bez identyfikatora i hasła.
+      placeholder: https://mmsoft.com.pl/lokale.php
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Wynik
+      options:
+        - Działa w całości
+        - Działa częściowo
+        - Nie działa wcale
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Co zadziałało, a co nie
+      description: >
+        Które encje mają wartości, a które są nieznane. Na przykład zarządca, który
+        nie publikuje uchwał, daje 0 w encji Votes, i to nie jest błąd integracji.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logi
+      description: >
+        Opcjonalnie. Ustawienia → System → Logi, filtr `lokalenet`. Zamień
+        identyfikator, kwoty i nazwy na zmyślone, zanim wkleisz.
+      render: text

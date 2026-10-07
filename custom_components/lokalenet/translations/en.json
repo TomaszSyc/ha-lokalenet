@@ -1,0 +1,98 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "LokaleNET account",
+        "description": "Log in with the identifier and password your property administrator gave you. The integration only reads the portal.",
+        "data": {
+          "url": "Portal address",
+          "username": "Identifier",
+          "password": "Password"
+        },
+        "data_description": {
+          "url": "Leave the default unless your administrator gave you a different login page.",
+          "username": "The identifier you use on the LokaleNET login page."
+        }
+      },
+      "reconfigure": {
+        "title": "Change the account",
+        "description": "A new portal address or identifier from your administrator. The entities stay the same.",
+        "data": {
+          "url": "Portal address",
+          "username": "Identifier",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Log in again",
+        "description": "The portal no longer accepts the password for {username}.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The portal did not accept the identifier or password.",
+      "cannot_connect": "The portal could not be reached, or it answered with a page that is not its login page (maintenance, or a wrong address).",
+      "unknown": "Unexpected error, see the log.",
+      "insecure_url": "Use an https:// address, the password would otherwise travel unencrypted.",
+      "invalid_url": "Enter only the address of the login page.",
+      "already_configured": "Another entry already uses this account."
+    },
+    "abort": {
+      "already_configured": "This account is already set up.",
+      "reauth_successful": "Password updated.",
+      "reconfigure_successful": "Account updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "Balance"
+      },
+      "amount_due": {
+        "name": "Amount due"
+      },
+      "due_date": {
+        "name": "Payment due date"
+      },
+      "monthly_charge": {
+        "name": "Monthly charge"
+      },
+      "last_payment": {
+        "name": "Last payment"
+      },
+      "last_payment_date": {
+        "name": "Last payment date"
+      },
+      "last_settlement": {
+        "name": "Last settlement"
+      },
+      "notices": {
+        "name": "Notices"
+      },
+      "votes": {
+        "name": "Votes"
+      },
+      "statement_date": {
+        "name": "Last bank statement"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Refresh"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "The portal no longer accepts the password."
+    },
+    "connection_failed": {
+      "message": "The portal could not be reached: {error}"
+    },
+    "parse_failed": {
+      "message": "A portal page has changed and could not be read: {error}"
+    }
+  }
+}

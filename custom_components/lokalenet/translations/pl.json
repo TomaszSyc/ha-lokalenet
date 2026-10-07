@@ -1,0 +1,98 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Konto LokaleNET",
+        "description": "Zaloguj się identyfikatorem i hasłem od zarządcy. Integracja tylko czyta portal.",
+        "data": {
+          "url": "Adres portalu",
+          "username": "Identyfikator",
+          "password": "Hasło"
+        },
+        "data_description": {
+          "url": "Zostaw domyślny, chyba że zarządca podał inną stronę logowania.",
+          "username": "Identyfikator, którym logujesz się w LokaleNET."
+        }
+      },
+      "reconfigure": {
+        "title": "Zmień konto",
+        "description": "Nowy adres portalu albo identyfikator od zarządcy. Encje zostają te same.",
+        "data": {
+          "url": "Adres portalu",
+          "username": "Identyfikator",
+          "password": "Hasło"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Zaloguj się ponownie",
+        "description": "Portal nie przyjmuje już hasła dla {username}.",
+        "data": {
+          "password": "Hasło"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Portal nie przyjął identyfikatora albo hasła.",
+      "cannot_connect": "Nie udało się połączyć z portalem albo odpowiedział stroną, która nie jest jego stroną logowania (przerwa techniczna albo zły adres).",
+      "unknown": "Nieoczekiwany błąd, szczegóły w logu.",
+      "insecure_url": "Podaj adres https://, inaczej hasło szłoby niezaszyfrowane.",
+      "invalid_url": "Podaj sam adres strony logowania.",
+      "already_configured": "To konto jest już dodane w innym wpisie."
+    },
+    "abort": {
+      "already_configured": "To konto jest już dodane.",
+      "reauth_successful": "Hasło zaktualizowane.",
+      "reconfigure_successful": "Konto zaktualizowane."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "Saldo"
+      },
+      "amount_due": {
+        "name": "Do zapłaty"
+      },
+      "due_date": {
+        "name": "Termin płatności"
+      },
+      "monthly_charge": {
+        "name": "Opłata miesięczna"
+      },
+      "last_payment": {
+        "name": "Ostatnia wpłata"
+      },
+      "last_payment_date": {
+        "name": "Data ostatniej wpłaty"
+      },
+      "last_settlement": {
+        "name": "Ostatnie rozliczenie"
+      },
+      "notices": {
+        "name": "Komunikaty"
+      },
+      "votes": {
+        "name": "Głosowania"
+      },
+      "statement_date": {
+        "name": "Ostatni wyciąg bankowy"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Odśwież"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "Portal nie przyjmuje już hasła."
+    },
+    "connection_failed": {
+      "message": "Nie udało się połączyć z portalem: {error}"
+    },
+    "parse_failed": {
+      "message": "Strona portalu się zmieniła i nie da się jej odczytać: {error}"
+    }
+  }
+}
